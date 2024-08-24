@@ -11,8 +11,8 @@ find_package(Vulkan REQUIRED)
 
 if (VULKAN_FOUND)
     message(STATUS "Found Vulkan,     Including and Linking now")
-    include_directories($.   {Vulkan_INCLUDE_DIRS})
-    target_link_libraries ($.   {PROJECT_NAME} PRIVATE Vulkan::Vulkan)
+    include_directories(${Vulkan_INCLUDE_DIRS})
+    target_link_libraries (${PROJECT_NAME} PRIVATE Vulkan::Vulkan)
 endif (VULKAN_FOUND)
 
 add_library(${PROJECT_NAME} STATIC)
