@@ -6,7 +6,14 @@ add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
 set(Vulkan_LIBRARY /VulkanSDK/1.3.290.0)
 set(Vulkan_INCLUDE_DIR /VulkanSDK/1.3.290.0/Include)
+
 find_package(Vulkan REQUIRED)
+
+if (VULKAN_FOUND)
+    message(STATUS "Found Vulkan,     Including and Linking now")
+    include_directories($.   {Vulkan_INCLUDE_DIRS})
+    target_link_libraries ($.   {PROJECT_NAME} PRIVATE Vulkan::Vulkan)
+endif (VULKAN_FOUND)
 
 add_library(${PROJECT_NAME} STATIC)
 
