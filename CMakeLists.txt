@@ -9,11 +9,7 @@ set(Vulkan_INCLUDE_DIR /VulkanSDK/1.3.290.0/Include)
 
 find_package(Vulkan REQUIRED)
 
-if (VULKAN_FOUND)
-    message(STATUS "Found Vulkan,     Including and Linking now")
-    include_directories(${Vulkan_INCLUDE_DIRS})
-    target_link_libraries (${PROJECT_NAME} PRIVATE Vulkan::Vulkan)
-endif (VULKAN_FOUND)
+
 
 add_library(${PROJECT_NAME} STATIC)
 
@@ -21,6 +17,11 @@ add_library(${PROJECT_NAME} STATIC)
 target_sources(${PROJECT_NAME} PRIVATE src/Window.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw glm)
+if (VULKAN_FOUND)
+    message(STATUS "Found Vulkan,     Including and Linking now")
+    include_directories(${Vulkan_INCLUDE_DIRS})
+    target_link_libraries(${PROJECT_NAME} PRIVATE Vulkan::Vulkan)
+endif (VULKAN_FOUND)
 
 target_include_directories(${PROJECT_NAME}
     PRIVATE
