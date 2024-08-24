@@ -3,13 +3,14 @@ cmake_minimum_required(VERSION 3.4...3.28 FATAL_ERROR)
 project(Vulkan2D VERSION 0.1.0)
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/glm)
 
 add_library(${PROJECT_NAME} STATIC)
 
 
 target_sources(${PROJECT_NAME} PRIVATE src/Window.cpp)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw)
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw glm)
 
 target_include_directories(${PROJECT_NAME}
     PRIVATE
