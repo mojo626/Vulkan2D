@@ -4,7 +4,7 @@ project(Vulkan2D VERSION 0.1.0)
 
 add_library(${PROJECT_NAME} STATIC)
 
-target_sources(${PROJECT_NAME} PRIVATE src/test.cpp)
+target_sources(${PROJECT_NAME} PRIVATE src/Window.cpp)
 
 target_include_directories(${PROJECT_NAME}
     PRIVATE
@@ -41,7 +41,7 @@ endif()
 
 # without it public headers won't get installed
 set(public_headers
-    include/test.h
+    include/Window.h
 )
 # note that ${public_headers} has to be in quotes
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "${public_headers}")
