@@ -4,8 +4,6 @@ project(Vulkan2D VERSION 0.1.0)
 
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
-set(Vulkan_LIBRARY \\VulkanSDK\\1.3.290.0)
-set(Vulkan_INCLUDE_DIR \\VulkanSDK\\1.3.290.0\\Include)
 
 find_package(Vulkan REQUIRED)
 
