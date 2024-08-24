@@ -1,15 +1,12 @@
 #include <iostream>
 #include "Window.h"
 
-class Window {
-    public:
-        Window()
-        {
-            
-        }
+Window::Window()
+{
 
-        void helloWorld()
-        {
-            std::cout << "Hello, World!" << std::endl;
-        }
-};
+}
+
+void Window::helloWorld()
+{
+    std::cout << "Hello, World!" << std::endl;
+}
