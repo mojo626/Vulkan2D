@@ -3,6 +3,7 @@
 
 class Window {
     public:
+        Window();
         void helloWorld();
 };
 
