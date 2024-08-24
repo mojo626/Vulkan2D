@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Window.h"
+#include <glfw3.h>
 
 Window::Window()
 {
