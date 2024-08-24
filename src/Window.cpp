@@ -2,6 +2,7 @@
 #include "Window.h"
 #include <GLFW/glfw3.h>
 #include <glm/vec4.hpp>
+#include <vulkan/vulkan.hpp>
 
 Window::Window()
 {

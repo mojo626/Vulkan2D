@@ -4,6 +4,7 @@ project(Vulkan2D VERSION 0.1.0)
 
 add_subdirectory(lib/glfw)
 add_subdirectory(lib/glm)
+find_package(Vulkan REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC)
 
